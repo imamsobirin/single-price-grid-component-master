@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --Cyan: rgb(42, 178, 175);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  background: var(--Light-Gray);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.container {
+  width: 50%;
+  margin: 50vh auto;
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-areas:
+    "col1 col1"
+    "row1 row2";
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.col {
+  padding: 30px 35px;
+}
+.col1 {
+  grid-area: col1;
+  background-color: white;
+}
+.col1 h1 {
+  color: var(--Cyan);
+}
+.col1 h2 {
+  color: var(--Bright-Yellow);
+}
+.col1 p {
+  color: var(--Grayish-Blue);
+}
+.col2 h2 {
+  color: var(--Light-Gray);
+}
+.row-2 p {
+  color: var(--Light-Gray);
+  opacity: 0.75;
+}
+.row-1 p {
+  color: var(--Light-Gray);
+}
+.row-1 {
+  grid-area: row1;
+  background-color: var(--Cyan);
+}
+.row-2 {
+  grid-area: row2;
+  background-color: rgba(42, 178, 175, 0.75);
+}
+
+.col2__price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.col2__price span {
+  font-size: 2rem;
+  color: white;
+  padding-right: 10px;
+}
+.btn {
+  background-color: var(--Bright-Yellow);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px;
+  color: var(--Light-Gray);
+  margin-top: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 428px) {
+  .container {
+    width: 90%;
+    display: grid;
+    margin-top: 50px;
+    transform: none;
+    grid-template-areas:
+      "col1"
+      "row1"
+      "row2";
+  }
+}
